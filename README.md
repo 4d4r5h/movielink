@@ -4,66 +4,74 @@
 
 ## ✨ Demo
 
-`readme-md-generator` is able to read your environment (package.json, git config...) to suggest you default answers during the `README.md` creation process:
+If you are not getting the required result, try to be more specific by providing more details. Sometimes you might be required to use VPN.
 
 <p align="center">
-  <img width="700" align="center" src="https://user-images.githubusercontent.com/9840435/60266022-72a82400-98e7-11e9-9958-f9004c2f97e1.gif" alt="demo"/>
+  <img width="800" align="center" src="https://user-images.githubusercontent.com/46349391/208126172-a623d21e-5d0a-4ca9-8e1b-85af675be7ae.png" alt="demo"/>
 </p>
-
-Generated `README.md`:
-
 <p align="center">
-  <img width="700" src="https://user-images.githubusercontent.com/9840435/60266090-9cf9e180-98e7-11e9-9cac-3afeec349bbc.jpg" alt="cli output"/>
+  <img width="800" align="center" src="https://user-images.githubusercontent.com/46349391/208126179-bfc94ae4-8102-4e4f-8a5e-afa610c398f1.png" alt="demo"/>
 </p>
-
-Example of `package.json` with good meta data:
-
-```json
-// The package.json is not required to run README-MD-GENERATOR
-{
-  "name": "readme-md-generator",
-  "version": "0.1.3",
-  "description": "CLI that generates beautiful README.md files.",
-  "author": "Franck Abgrall",
-  "license": "MIT",
-  "homepage": "https://github.com/kefranabg/readme-md-generator#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kefranabg/readme-md-generator.git"
-  },
-  "bugs": {
-    "url": "https://github.com/kefranabg/readme-md-generator/issues"
-  },
-  "engines": {
-    "npm": ">=5.5.0",
-    "node": ">=9.3.0"
-  }
-}
-```
+<p align="center">
+  <img width="800" align="center" src="https://user-images.githubusercontent.com/46349391/208126200-2b28c5c9-35b8-43ec-9452-65ecef0f7942.png" alt="demo"/>
+</p>
+<p align="center">
+  <img width="800" align="center" src="https://user-images.githubusercontent.com/46349391/208126247-9664916f-8caf-4be8-b01b-d4bb74c3405c.png" alt="demo"/>
+</p>
+<p align="center">
+  <img width="800" align="center" src="https://user-images.githubusercontent.com/46349391/208126278-6c89ae03-feea-4b1d-a96d-0a4e3e85abde.png" alt="demo"/>
+</p>
+<p align="center">
+  <img width="800" align="center" src="https://user-images.githubusercontent.com/46349391/208126286-3f861a0d-249f-4d1e-951f-571bc9a2e9a9.png" alt="demo"/>
+</p>
+<p align="center">
+  <img width="800" align="center" src="https://user-images.githubusercontent.com/46349391/208126318-4540c42a-af93-4ab5-bd16-351ffaf9f646.png" alt="demo"/>
+</p>
 
 ## 🚀 Usage
 
-Make sure you have [npx](https://www.npmjs.com/package/npx) installed (`npx` is shipped by default since npm `5.2.0`)
+Either you can use <a href="https://movie-link.up.railway.app/">this</a> website or run the project locally.
+Remember that the website from which the data is scraped can change its tags and attributes, leading to the `non-functioning` of the project.
 
-Just run the following command at the root of your project and answer questions:
+<b>To run the project locally, follow the steps:</b>
 
+Download the project from <a href="https://github.com/4d4r5h/movielink/archive/refs/heads/main.zip">here</a>. Extract it.
+
+Create a `virtual environment`.
 ```sh
-npx readme-md-generator
+pip install virtualenv
+virtualenv venv
+.\venv\Scripts\activate
+```
+If unable to activate, run the below command in the powershell as an administrator and enter `Y`.
+```sh
+Set-ExecutionPolicy RemoteSigned
 ```
 
-Or use default values for all questions (`-y`):
-
+Install all the required libraries.
 ```sh
-npx readme-md-generator -y
+pip install -r requirements.txt
 ```
+<p align="center">
+  <img width="800" align="center" src="https://user-images.githubusercontent.com/46349391/208132310-f4b2d94e-5851-4f7b-9fec-b77495044773.png" alt="usage"/>
+</p>
 
-Use your own `ejs` README template (`-p`):
-
+Run the server and visit the website.
 ```sh
-npx readme-md-generator -p path/to/my/own/template.md
+python manage.py runserver
 ```
+<p align="center">
+  <img width="800" align="center" src="https://user-images.githubusercontent.com/46349391/208132353-b916ecb1-72d8-448b-b50f-c5f4e10190aa.png" alt="usage"/>
+</p>
 
-You can find [ejs README template examples here](https://github.com/kefranabg/readme-md-generator/tree/master/templates).
+Do not forget to create a `.env` file and put all the keys inside it.
+<p align="center">
+  <img width="800" align="center" src="https://user-images.githubusercontent.com/46349391/208132397-f66b02c6-661e-42be-b117-0d728a018291.png" alt="usage"/>
+</p>
+
+Read [this](https://mixedanalytics.com/blog/seo-data-google-custom-search-json-api/) to know how to get the keys.
+OR
+Contact me on [LinkedIn](https://www.linkedin.com/in/adarsh-kumar-958277212/) and I'll provide you a temporary key.
 
 ## Code Contributors
 
