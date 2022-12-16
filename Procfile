@@ -1,0 +1,1 @@
+web: gunicorn movielink.wsgi --log-file -
